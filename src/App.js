@@ -4,6 +4,8 @@ import './App.css';
 import Home from "./components/home/Home"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer} from "react-toastify"
+
 
 function App() {
 
@@ -15,7 +17,7 @@ function App() {
 
   return (
     <div className="wrapper">
-
+ <ToastContainer />
 
       <Router>
         <Routes>
