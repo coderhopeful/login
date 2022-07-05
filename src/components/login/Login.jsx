@@ -3,7 +3,7 @@ import { useState } from 'react'
 import "./login.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify"
-import { useNavigate } from 'react-router-dom';;
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -37,7 +37,7 @@ export default function Login() {
             
             localStorage.setItem('accessToken', response['token']);
             
-            toast.success("Login successful", {position: toast.POSITION.TOP_RIGHT,autoClose:5000});
+            toast.success("Login successful", {position: toast.POSITION.TOP_RIGHT,autoClose:2000});
             
 
             navigate('/home');
@@ -45,7 +45,7 @@ export default function Login() {
         }
         else {
 
-            toast.error("Login failed")
+            toast.error("Login failed",{position: toast.POSITION.TOP_RIGHT,autoClose:false})
 
         }
     }

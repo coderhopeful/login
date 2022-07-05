@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Card, Container,  Row } from 'react-bootstrap'
+import { Card, Container, Row } from 'react-bootstrap'
 import 'react-toastify/dist/ReactToastify.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import "./home.css"
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from "react-toastify"
+
 
 
 
@@ -36,15 +36,15 @@ function Home() {
     }, [])
 
     const removeToken = (userToken) => {
-        localStorage.removeItem("token");
-        toast.success("Logged out successfully!", {position: toast.POSITION.TOP_RIGHT,autoClose:3000});
+        localStorage.removeItem("accessToken");
+
         navigate('/');
     };
 
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar  sx={{ bgcolor: "black" }} position="static">
+                <AppBar sx={{ bgcolor: "black" }} position="static">
                     <Toolbar>
                         <IconButton
                             size="small"
@@ -58,7 +58,7 @@ function Home() {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             Reqres Users
                         </Typography>
-                        <Button onClick={removeToken} sx={{ bgcolor: "red", color:"white" }}>Logout</Button>
+                        <Button onClick={removeToken} sx={{ bgcolor: "red", color: "white" }}>Logout</Button>
                     </Toolbar>
                 </AppBar>
             </Box>
@@ -69,7 +69,7 @@ function Home() {
                     {
 
                         users.map((user) => (
-                            <Card className="card border border-dark rounded-3 " style={{ width: '18rem'}}>
+                            <Card className="card border border-dark rounded-3 " style={{ width: '18rem' }}>
                                 <Card.Img className="card-img" variant="top" src={user.avatar} />
                                 <Card.Body>
                                     <Card.Title className="text-center"><b>{user.first_name} {user.last_name} </b></Card.Title>
