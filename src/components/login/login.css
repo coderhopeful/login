@@ -65,3 +65,42 @@ input{
     border-radius:25px;
     border:1px solid grey;
 }
+
+
+@media screen and (max-width: 480px) {
+    .login{
+      flex-direction: column;
+      
+    }
+
+    .login-left-wrapper{
+        height:50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    h3,h5,h2{
+        text-align: center;
+        
+    }
+ .login-right-wrapper{
+    align-items:center ;
+    justify-content: center;
+    
+ }
+
+ .login-right{
+    margin-left:0px;
+    align-items: center;
+   margin-top: 25px;
+ }
+
+ .email, .password{
+   align-items: center;
+    justify-content:center ;
+ }
+    
+  }

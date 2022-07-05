@@ -36,16 +36,12 @@ export default function Login() {
         if ('token' in response) {
             
             localStorage.setItem('accessToken', response['token']);
-            
-            toast.success("Login successful", {position: toast.POSITION.TOP_RIGHT,autoClose:2000});
-            
-
+            toast.success("Login successful", {position: toast.POSITION.TOP_CENTER,autoClose:2000});
             navigate('/home');
           
         }
         else {
-
-            toast.error("Login failed",{position: toast.POSITION.TOP_RIGHT,autoClose:false})
+         toast.error("Login failed",{position: toast.POSITION.TOP_CENTER,autoClose:false})
 
         }
     }
