@@ -13,9 +13,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
+   text-align: center;
 }
 
 h3{
@@ -67,7 +67,7 @@ input{
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
     .login{
       flex-direction: column;
       
